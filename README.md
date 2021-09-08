@@ -25,13 +25,11 @@ public String get(@NotNull @RequestParam String echo) {
 }
 ```
 The demo application excludes ValidationAutoConfiguration from autoconfiguration and adds ValidationFixAutoConfiguration.
-It issue a bit confusing, but you can change the @EnableAutoConfiguration in ParentConfig, ChildConfig and WebConfig
-to see the issues that occur.
+The issue is a bit confusing, but you can change the @EnableAutoConfiguration in ParentConfig, ChildConfig and WebConfig
+to switch between disabling the two version of validation auto configuration.
 
-You need to also change the Caller autoconfiguration in ParentConfig and ChildConfig to see the issue.
+spring.boot.validation.autoconfig.ValidationFixAutoConfiguration
 
-There issue also a small demo web application
+org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration
 
-
-
-
+You may need to also change the Caller configuration in ParentConfig and ChildConfig to see the issue.
