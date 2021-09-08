@@ -12,7 +12,7 @@ If you have shared classpath with a parent and child context created something l
 new SpringApplicationBuilder()
     .parent(ParentConfig.class).web(WebApplicationType.NONE).bannerMode(Banner.Mode.OFF)
     .child(WebConfig.class).web(WebApplicationType.SERVLET).bannerMode(Banner.Mode.OFF)
-    .run(args);```
+    .run(args);
 
 ```
 The child web context will not validate method parameters, such as in this example
